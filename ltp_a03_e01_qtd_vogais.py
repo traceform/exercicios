@@ -2,7 +2,7 @@
 vogais = ['a', 'e', 'i', 'o', 'u']
 vogaisAcentuadas = ['á', 'é', 'í', 'ó', 'ú', 'à', 'â', 'ê', 'ô', 'ã', 'õ', 'ü']
 
-name = "José Carioca"
+name = "José Carioca".lower()
 qtdVogais = 0
 
 for l in name:
