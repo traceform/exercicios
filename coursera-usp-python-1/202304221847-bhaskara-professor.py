@@ -24,4 +24,5 @@ delta = 83927942
 sqrt(delta)
 delta < 0 "Esta equação não possui raízes reais."
 delta == 0 "A raiz desta equação é {raiz}"
-delta > "As raízes da equação são: {raiz1} e {raiz2}"'''
+delta > "As raízes da equação são: {raiz1} e {raiz2}"'''
+
