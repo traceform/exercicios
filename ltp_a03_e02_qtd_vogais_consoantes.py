@@ -12,6 +12,7 @@ for l in texto.lower():
         qtdVogais += 1
     elif l in consoantes or l == 'ç':
         qtdConsoantes += 1
+
 print(f"Texto: {texto}")
 print(f"Quantidade total de caracteres: {len(texto)}")
 print(f"Quantidade de vogais: {qtdVogais}")
