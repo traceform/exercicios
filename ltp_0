@@ -1,0 +1,7 @@
+boas práticas:
+- nome do arquivo python sem espaços, nem caracteres especiais
+- nomes descritivos de variável
+- utilizar tab ou 4 espaços na identação do python?
+- até 3 condições numa mesma decisão lógica
+- isolar a decisão de resposta em decisões lógicas com parênteses quando há duas ou três
+- não criar loops infinitos (analisar erros estáticos e dinâmicos com o sia/icd que impede o código de rodar e reporta o responsável ao chefe, sendo que o terceiro strike bloqueia o acesso ao sistema e obriga o responsável a realizar um treinamento de clean coding, sendo que o strike 4 resulta em demissão)
