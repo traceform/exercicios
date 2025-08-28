@@ -7,7 +7,7 @@ invalido = True                                                                 
 while invalido:
     try:
         mes = int(input("Digite o dígito referente a um mês: "))                      # Pede, recebe e armazena o valor digitado pelo usuário na variável 'mes'
-        if 0 < mes < 13 and mes is not float:                                         # Valida o número (é inteiro, entre 1 e 12)
+        if 0 < mes < 13:                                         # Valida o número (é inteiro, entre 1 e 12)
             print(f"O mês é {meses.get(mes)}.")                                       # Usa o número como chave para pegar o valor certo no dicionário
             invalido = False                                                          # Encerra a repetição
         else:
