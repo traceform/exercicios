@@ -12,4 +12,5 @@ def calculaMedia(notas):
     media = soma / len(notas)
     return media
 
+
 print(calculaMedia(entradaDados(int(input("Quantas notas? ")))))
