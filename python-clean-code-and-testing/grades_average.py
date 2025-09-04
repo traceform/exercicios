@@ -31,7 +31,7 @@ def calculate_average(grades: list[float]) -> float:
         raise ValueError("Grade list cannot be empty.")
     return sum(grades) / len(grades)
 
-def main():
+def main(): #according to the teacher this section is so small it could be moved to the next instead
     quantity = get_quantity("Quantidade de notas a informar: ")
     grades = get_grades(quantity)
     average = calculate_average(grades)
@@ -39,3 +39,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
