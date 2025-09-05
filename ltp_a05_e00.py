@@ -6,13 +6,13 @@ print(v)
 v = int(10.9)
 print(v)
 
-v = int(True)
+v = int(True) # vira 1
 print(v)
 
-v = int(False)
+v = int(False) # vira 0
 print(v)
 
-### BOOLEANO: Retorna False se for 0 ou None e True se tiver algum valor, seja 1, positivo e negativo
+### BOOLEANO: Retorna False se for 0, 0.0, '' ou None e True se tiver algum valor, seja 1, positivo e negativo, '0', 'False', etc
 print("====BOOLEAN====")
 v = bool(True)
 print(v)
@@ -20,10 +20,10 @@ print(v)
 v = bool(False)
 print(v)
 
-v = bool(0)
+v = bool(0) # vira False
 print(v)
 
-v = bool(1)
+v = bool(1) # vira True
 print(v)
 
 v = bool(10)
