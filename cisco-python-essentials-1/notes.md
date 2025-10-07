@@ -1,0 +1,73 @@
+Language:
+	1. Alphabet
+	2. Lexis
+	3. Syntax
+	4. Semantics
+
+Program:
+	1. Input
+	2. Processing
+	3. Output
+
+Compilation vs Interpretation
+	1. COMPILATION
+	- Doesn't need compiler to work
+	- Usually faster, but can't be easily edited
+	- May take time to fully compile
+	- Source code is hidden from the user and can't be shared easily as it needs to be compiled for each kind of architecture
+
+  2. INTERPRETATION
+	- Needs interpreter to work
+	- Usually slower than compiled because the computer resources are shared among the source program and the interpreter itself
+	- Happens instantly, line by line
+	- Source code is easily shareable and works anywhere there is a interpreter
+
+How to read Python:
+	`var = 1`
+	The first line of the snippet creates a new variable named var and assigns 1 to it.
+	The statement reads: assign a value of 1 to a variable named var.
+	We can say it shorter: assign 1 to var.
+	Some prefer to read such a statement as: var becomes 1.
+
+	`var = var + 1`
+	The third line assigns the same variable with the new value taken from the variable itself, summed with 1. Seeing a record like that, a mathematician would probably protest ‒ no value may be equal to itself plus one. This is a contradiction. But Python treats the sign = not as equal to, but as assign a value.
+	Take the current value of the variable var, add 1 to it and store the result in the variable var.
+	In effect, the value of variable var has been incremented by one, which has nothing to do with comparing the variable with any value.
+
+Functions:
+	1. cause some effect. Ex.: print()
+	2. or evaluate a value. Ex.: sqrt()
+	- have parameters to accept (positional/keyword) arguments
+
+Keywords:
+`['False', 'None', 'True', 'and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']`
+
+'False', 'True' - boolean values
+'None' - Null equivalent in python
+'and', 'or', 'not' - logical operators
+'in', 'is' - ?
+'if', 'elif', 'else' - conditions
+'while', 'for', 'break', 'continue' - loops
+'def', 'return' - functions
+'import', 'from', 'as' - working with modules and libraries
+'try', 'except', 'finally', 'raise' - validation
+'with', 'as' - working with files
+
+Need to learn: 'assert', 'class', 'del', 'global', 'lambda', 'nonlocal', 'pass', 'yield'
+
+Operators:
+	Assignment: '='
+  Basic: **, unary +, unary -, *, /, //, %, binary +, binary -
+	Shortcut: '+=', '-=', '*=', '/=', '//=', '%='
+
+Cool things to keep in mind:
+	2 % 4 equals 2 because 2 - 4 * (2 // 4) = 2 - 4 * 0 = 2 - 0 = 2
+	2 % -4 equals -2 because 2 - (-4) * (2 // -4) = 2 - (-4) * -1.0 = 2 - 4 = -2
+	9 ** 0.5 # square root of 9
+	9 * 0.1 # 10% of 9
+	9 * 1.1 # 9 + 10% of 9
+
+Remember:
+  - literal: data whose values are determined by the literal itself. Ex.: 123 is a literal, and c is not. You use literals to encode data and to put them into your code.
+  - operator: symbol of the programming language, which is able to operate on the values.
+  - expressions: formed when data and operators are connected together. The simplest expression is a literal itself.
