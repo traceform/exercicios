@@ -24,10 +24,10 @@ Compilation vs Interpretation
 
 How to read Python:
 > - `var = 1`
-> The first line of the snippet creates a new variable named var and assigns 1 to it.
-> The statement reads: assign a value of 1 to a variable named var.
-> We can say it shorter: assign 1 to var.
-> Some prefer to read such a statement as: var becomes 1.
+> - The first line of the snippet creates a new variable named var and assigns 1 to it.
+> - The statement reads: assign a value of 1 to a variable named var.
+> - We can say it shorter: assign 1 to var.
+> - Some prefer to read such a statement as: var becomes 1.
 	- `var = var + 1`
 	The third line assigns the same variable with the new value taken from the variable itself, summed with 1. Seeing a record like that, a mathematician would probably protest ‒ no value may be equal to itself plus one. This is a contradiction. But Python treats the sign = not as equal to, but as assign a value.
 	Take the current value of the variable var, add 1 to it and store the result in the variable var.
