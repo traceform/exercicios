@@ -30,11 +30,11 @@
 > - Some prefer to read such a statement as: var becomes 1.
 
 > - `var = var + 1`
-> The third line assigns the same variable with the new value taken from the variable itself, summed with 1. Seeing a record like that, a mathematician would probably protest ‒ no value may be equal to itself plus one. This is a contradiction. But Python treats the sign = not as equal to, but as assign a value.
-> Take the current value of the variable var, add 1 to it and store the result in the variable var.
-> In effect, the value of variable var has been incremented by one, which has nothing to do with comparing the variable with any value.
+> - The third line assigns the same variable with the new value taken from the variable itself, summed with 1. Seeing a record like that, a mathematician would probably protest ‒ no value may be equal to itself plus one. This is a contradiction. But Python treats the sign = not as equal to, but as assign a value.
+> - Take the current value of the variable var, add 1 to it and store the result in the variable var.
+> - In effect, the value of variable var has been incremented by one, which has nothing to do with comparing the variable with any value.
 
-Functions:
+#### Functions:
 1. cause some effect. Ex.: print()
 2. or evaluate a value. Ex.: sqrt()
 - have parameters to accept (positional/keyword) arguments
