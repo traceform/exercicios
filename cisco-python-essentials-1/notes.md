@@ -69,7 +69,7 @@ Need to learn: 'assert', 'class', 'del', 'global', 'lambda', 'nonlocal', 'pass',
 - 9 * 0.1 # 10% of 9
 - 9 * 1.1 # 9 + 10% of 9
 
-Remember:
+#### Remember:
 - literal: data whose values are determined by the literal itself. Ex.: 123 is a literal, and c is not. You use literals to encode data and to put them into your code.
 - operator: symbol of the programming language, which is able to operate on the values.
 - expressions: formed when data and operators are connected together. The simplest expression is a literal itself.
