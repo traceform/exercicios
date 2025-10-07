@@ -40,7 +40,8 @@
 - have parameters to accept (positional/keyword) arguments
 
 #### Keywords:
-`['False', 'None', 'True', 'and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']`
+```known
+['False', 'None', 'True', 'and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
 
 'False', 'True' - boolean values
 'None' - Null equivalent in python
@@ -52,6 +53,7 @@
 'import', 'from', 'as' - working with modules and libraries
 'try', 'except', 'finally', 'raise' - validation
 'with', 'as' - working with files
+```
 
 Need to learn: 'assert', 'class', 'del', 'global', 'lambda', 'nonlocal', 'pass', 'yield'
 
