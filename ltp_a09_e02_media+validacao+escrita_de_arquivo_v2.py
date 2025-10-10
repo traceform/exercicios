@@ -135,7 +135,7 @@ CTRL+C - terminar o programa.
                 NOMEARQUIVO = valida_nome_arquivo()
                 print(texto)
             else:
-                print("Opção inválida!")
+                print("Opção inexistente.")
         except KeyboardInterrupt:
             print("\nPrograma encerrado.")
             quit()
