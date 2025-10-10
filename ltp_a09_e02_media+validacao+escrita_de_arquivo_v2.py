@@ -1,7 +1,7 @@
 # 1. Faça um Programa que peça as 4 notas bimestrais e mostre a média.
 # 2. Alterar o programa anterior para incluir o nome nos registros solicitados e gravar um arquivo com o resultado
 
-# Variáveis globais hardcoded:
+# Variáveis globais:
 QTDNOTAS = 4
 NOMEARQUIVO = 'media_bimestral.txt'
 
