@@ -1,4 +1,6 @@
-Aqui ficam os scripts Python que eu criei ao participar de diversos cursos e graduações.
+Aqui ficam os scripts de Python que eu criei ao participar de diversos cursos e graduações ao longo dos meus estudos.
+
+Meu foco aqui é desenvolvimento seguro de software com testes automatizados de acordo com as boas práticas do Clean Code.
 
 |             Nome           | Informações |
 |----------------------------|-------------|
