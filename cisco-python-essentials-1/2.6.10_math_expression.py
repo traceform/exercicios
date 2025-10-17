@@ -56,6 +56,7 @@ y = -0.19258202567760344
 '''
 
 def test_code():
+    """Tests the code with predefined values"""
     input_list = [1, 10, 100, -5, 0, 'a', True, False]
     output_list = [0.6000000000000001, 0.09901951266867294, 0.009999000199950014, -0.19258202567760344, None, None, 0.6000000000000001, None]
     for i in range(0,len(input_list)):
@@ -68,6 +69,7 @@ def test_code():
             print(f"Error! {input} does NOT result in {output}")
 
 def math_expression(x):
+    """Evaluates the math expression with a given number"""
     y, msg = None, None
     try:
         y = 1/(x + 1/(x + 1/(x + 1/x)))
