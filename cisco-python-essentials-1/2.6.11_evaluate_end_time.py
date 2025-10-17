@@ -44,3 +44,48 @@ Test your code carefully. Hint: using the % operator may be the key to success.
 1:0
 ```
 
+
+'''
+hour = 12#int(input("Starting time (hours): "))
+mins = 17#int(input("Starting time (minutes): "))
+dura = 59#int(input("Event duration (minutes): "))
+
+seconds = (hour * 3600) + (mins * 60) + (dura * 60)
+#print(seconds)
+#minutes = int(((seconds / 3600) - int(seconds / 3600)) * 60)
+#print(minutes)
+minutes = int((seconds % 3600) / 60)
+#print(minutes)
+hours = int(seconds / 3600)
+
+print(f"""
+{hours}:{minutes}
+""")
+'''
+
+'''
+hour = 12#int(input("Starting time (hours): "))
+mins = 17#int(input("Starting time (minutes): "))
+dura = 59#int(input("Event duration (minutes): "))
+mins = mins + hour * 60 + dura
+hour = int(mins / 60)
+mins = mins % 60
+print(hour, ":", mins, sep='')
+'''
+
+'''
+hour = 23#int(input("Starting time (hours): "))
+mins = 58#int(input("Starting time (minutes): "))
+dura = 642#int(input("Event duration (minutes): "))
+mins = mins + hour * 60 + dura
+hour = int(mins / 60) % 24
+mins = mins % 60
+print(hour, ":", mins, sep='')
+'''
+
+
+
+
+
+
+
