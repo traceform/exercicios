@@ -61,12 +61,12 @@ def test_code():
     for i in range(0,len(input_list)):
         input = input_list[i]
         output = output_list[i]
-        if main(input) == output:
+        if math_expression(input) == output:
             print(f"Success! {input} returns {output}")
         else:
             print(f"Error! {input} does NOT result in {output}")
 
-def main(x):
+def math_expression(x):
     y = 1/(x + 1/(x + 1/(x + 1/x)))
     return y
 
@@ -77,5 +77,6 @@ test_code()
 #y = 1/(x + 1/(x + 1/(x + 1/x)))
 
 #print("y =", y)
+
 
 
