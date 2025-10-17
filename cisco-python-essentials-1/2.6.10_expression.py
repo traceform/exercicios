@@ -70,13 +70,5 @@ def math_expression(x):
     y = 1/(x + 1/(x + 1/(x + 1/x)))
     return y
 
-test_code()
-
-#x = float(input("Enter value for x: "))
-
-#y = 1/(x + 1/(x + 1/(x + 1/x)))
-
-#print("y =", y)
-
-
-
+#test_code()
+print("y =", math_expression(float(input("Enter value for x: "))))
