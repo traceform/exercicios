@@ -1,0 +1,97 @@
+''' 3.1.11 **LAB** Essentials of the if-else statement
+
+## Scenario
+
+Once upon a time there was a land - a land of milk and honey, inhabited by happy and prosperous people. The people paid taxes, of course - their happiness had limits. The most important tax, called the _Personal Income Tax_ (_PIT_ for short) had to be paid once a year, and was evaluated using the following rule:
+
+- if the citizen's income was not higher than 85,528 thalers, the tax was equal to 18% of the income minus 556 thalers and 2 cents (this was what they called _tax relief_)
+- if the income was higher than this amount, the tax was equal to 14,839 thalers and 2 cents, plus 32% of the surplus over 85,528 thalers.
+
+Your task is to write a **tax calculator**.
+
+- It should accept one floating-point value: the income.
+- Next, it should print the calculated tax, rounded to full thalers. There's a function named `round()` which will do the rounding for you - you'll find it in the skeleton code in the editor.
+
+Note: this happy country never returned any money to its citizens. If the calculated tax was less than zero, it would only mean no tax at all (the tax was equal to zero). Take this into consideration during your calculations.
+
+Look at the code in the editor - it only reads one input value and outputs a result, so you need to complete it with some smart calculations.
+
+Test your code using the data we've provided.
+
+  
+
+## Test Data
+
+**Sample input:**
+```
+10000
+```
+
+**Expected output:**
+```
+The tax is: 1244.0 thalers
+```
+
+**Sample input:**
+```
+100000
+```
+
+**Expected output:**
+```
+The tax is: 19470.0 thalers
+```
+
+**Sample input:**
+```
+1000
+```
+
+**Expected output:**
+```
+The tax is: 0.0 thalers
+```
+
+**Sample input:**
+```
+-100
+```
+
+**Expected output:**
+```
+The tax is: 0.0 thalers
+```
+'''
+
+def tax_calculator(income):
+    threshold = 85528
+    tax_relief = 556.02
+
+    income = float(income)
+
+    if income < threshold:
+        # tax equal to 18% of the income minus 556 thalers and 2 cents of tax relief
+        tax = (income * 0.18) - tax_relief
+    else:
+        # tax equal to 14,839 thalers and 2 cents, plus 32% of the surplus over 85,528 thalers
+        tax = 14839.02 + ((income - threshold) * 0.32)
+    if tax < 0:
+        # country never returns any money to its citizens
+        tax = 0.0
+    tax = round(tax, 0)
+    return f"The tax is: {tax} thalers"
+
+def test_code():
+    sample_input = [10000, 100000, 1000, -100]
+    expected_output = ["The tax is: 1244.0 thalers", "The tax is: 19470.0 thalers", "The tax is: 0.0 thalers", "The tax is: 0.0 thalers"]
+
+    for _ in range(len(sample_input)):
+        input = sample_input[_]
+        output = tax_calculator(input)
+        if output == expected_output[_]:
+            print(f"Success! Input: {input} | Output: {output}")
+        else:
+            print(f"Error! Input: {input} | Output: {output}")
+
+#print(tax_calculator(input("Inform your income: ")))
+test_code()
