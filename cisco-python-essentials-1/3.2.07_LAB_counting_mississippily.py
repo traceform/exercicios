@@ -19,5 +19,34 @@ Use the skeleton we've provided in the editor.
 Note that the code in the editor contains two elements which may not be fully clear to you at this moment: the `import time` statement, and the `sleep()` method. We're going to talk about them soon.
 
 For the time being, we'd just like you to know that we've imported the `time` module and used the `sleep()` method to suspend the execution of each subsequent `print()` function inside the `for` loop for one second, so that the message outputted to the console resembles an actual counting. Don't worry - you'll soon learn more about modules and methods.
+
+**Expected output:**
+```
+1 Mississippi
+2 Mississippi
+3 Mississippi
+4 Mississippi
+5 Mississippi
+Ready or not, here I come!
+```
 '''
 
+''' # Version 1
+import time
+
+for second in range(1, 5+1):
+    print(f"{second} Mississippi")
+    time.sleep(1)
+
+print("Ready or not, here I come!")
+
+'''
+
+# Version 2
+from time import sleep
+
+for second in range(1, 5+1):
+    print(f"{second} Mississippi")
+    sleep(1)
+
+print("Ready or not, here I come!")
