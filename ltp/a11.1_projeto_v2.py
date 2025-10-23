@@ -62,12 +62,12 @@ def visualizarDados(dados):
         print("Não foi possível calcular as estatísticas dos dados.")
 
 dados, msg = carregarDados(NOMEARQUIVO)
-if isinstance(dados, pd.DataFrame):
-    if not dados.empty:
-        dados, msg = prepararDados(dados)
-        if isinstance(dados, pd.DataFrame):
-            if not dados.empty:
-                visualizarDados(dados)
+if isinstance(dados, pd.DataFrame) and not dados.empty:
+    print(msg)
+    dados, msg = prepararDados(dados)
+    if isinstance(dados, pd.DataFrame) and not dados.empty:
+        print(msg)
+        visualizarDados(dados)
     else:
         print(msg)
 else:
