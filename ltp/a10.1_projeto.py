@@ -67,8 +67,14 @@ print(f"\n{15 * '='} HISTORIOGRAMA DE IDADE {15 * '='}")
 print(msg3)
 print()
 print(f"{24 * '='} INFO {24 * '='}")
-print(dados.info(), end='')
-print(msg2)
+if info:
+    print(info, end='')
+else:
+    print(msg2)
 print()
 print(f"{22 * '='} CÁLCULOS {22 * '='}")
-print(calculos)
+if calculos:
+    print(calculos)
+else:
+    print(msg1)
+
