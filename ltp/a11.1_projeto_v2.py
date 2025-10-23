@@ -8,30 +8,36 @@ def carregarDados(arquivo):
     dados, msg = None, None
     try:
         dados = pd.read_csv(arquivo, sep=',')
-        msg = "Dados carregados."
+        msg = f"Dados carregados com sucesso. Quantidade de linhas e colunas no DataFrame: {dados.shape}"
     except FileNotFoundError:
         msg = f"Arquivo '{arquivo}' não encontrado!"
     except:
         msg = "Não foi possível carregar os dados!"
+
     return dados, msg
 
 def prepararDados(dados):
-    """Deduplica dados"""
+    """Prepara os dados para a exibição"""
     msg = None
     #dados = None
     try:
         #dados = dados.drop_duplicates()
         # Remove duplicatas de forma otimizada
         dados.drop_duplicates(inplace=True)
+
         # Remove certas colunas problemáticas
         dados.drop(columns=['Name', 'PassengerId', 'Cabin'], inplace=True)
+
         # Remove dados Nulos
         dados.dropna(inplace=True)
-        # Mostra matriz de dados
-        #dados.shape
+
         # Mostra quantas linhas e colunas
+        #dados.shape
+
+        # Mostra a matriz de dados (valores brutos, sem rótulos)
         #dados.values
-        msg = "Dados preparados."
+
+        msg = f"Dados preparados com sucesso. Quantidade de linhas e colunas no DataFrame: {dados.shape}"
     except AttributeError:
         msg = "O elemento atribuído está vazio!"
     except:
@@ -45,7 +51,7 @@ def visualizarDados(dados):
     try:
         dados['Age'].hist()
         plt.show()
-        print("Gráfico gerado com sucesso")
+        print("Gráfico gerado com sucesso!")
     except:
         print("Não foi possível gerar o historiograma de idade.")
 
@@ -61,14 +67,17 @@ def visualizarDados(dados):
     except:
         print("Não foi possível calcular as estatísticas dos dados.")
 
-dados, msg = carregarDados(NOMEARQUIVO)
+dados, msg1 = carregarDados(NOMEARQUIVO)
+
 if isinstance(dados, pd.DataFrame) and not dados.empty:
-    print(msg)
-    dados, msg = prepararDados(dados)
+    print(msg1)
+    dados, msg2 = prepararDados(dados)
+
     if isinstance(dados, pd.DataFrame) and not dados.empty:
-        print(msg)
+        print(msg2)
         visualizarDados(dados)
     else:
-        print(msg)
+        print(msg2)
 else:
-    print(msg)
+    print(msg1)
+
