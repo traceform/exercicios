@@ -10,7 +10,7 @@ def carregarDados(arquivo):
         dados = pd.read_csv(arquivo, sep=',')
         msg = "Dados carregados."
     except FileNotFoundError:
-        msg = f"Arquivo {arquivo} não encontrado!"
+        msg = f"Arquivo '{arquivo}' não encontrado!"
     except:
         msg = "Não foi possível carregar os dados!"
     return dados, msg
@@ -31,60 +31,44 @@ def prepararDados(dados):
         #dados.shape
         # Mostra quantas linhas e colunas
         #dados.values
-        msg = "Dados deduplicados."
+        msg = "Dados preparados."
     except AttributeError:
         msg = "O elemento atribuído está vazio!"
     except:
-        msg = "Não foi possível deduplicar os dados!"
+        msg = "Não foi possível preparar os dados!"
     return dados, msg
 
 def visualizarDados(dados):
-    """Mostra cálculos gerados sobre os dados e gera um gráfico"""
-    msg1, info, msg2, calculos, msg3 = None, None, None, None, None
+    """Mostra um historiograma, informações sobre o DataFrame e gera cálculos estatísticos básicos"""
 
+    print(f"\n{15 * '='} HISTORIOGRAMA DE IDADE {15 * '='}")
     try:
-        #raise Exception()
         dados['Age'].hist()
         plt.show()
-        msg1 = ''
+        print("Gráfico gerado com sucesso")
     except:
-        msg1 = "Não foi possível gerar o historiograma de idade."
+        print("Não foi possível gerar o historiograma de idade.")
 
+    print(f"\n{24 * '='} INFO {24 * '='}")
     try:
-        #raise Exception()
-        info = dados.info()
-        msg2 = ''
+        dados.info()
     except:
-        msg2 = "Não foi possível mostrar as informações dos dados."
+        print("Não foi possível mostrar as informações dos dados.")
 
+    print(f"\n{22 * '='} CÁLCULOS {22 * '='}")
     try:
-        #raise Exception()
-        calculos = dados.describe()
-        msg3 = "Gráfico gerado com sucesso"
+        print(dados.describe())
     except:
-        msg3 = "Não foi possível calcular as estatísticas dos dados."
-
-    return msg1, info, msg2, calculos, msg3
+        print("Não foi possível calcular as estatísticas dos dados.")
 
 dados, msg = carregarDados(NOMEARQUIVO)
-print(msg)
-
-dados, msg = prepararDados(dados)
-print(msg)
-
-msg1, info, msg2, calculos, msg3 = visualizarDados(dados)
-print(f"\n{15 * '='} HISTORIOGRAMA DE IDADE {15 * '='}")
-print(msg3)
-print()
-print(f"{24 * '='} INFO {24 * '='}")
-# Entender mais sobre .info()
-if dados.info() is True:
-    print(info, end='')
+if isinstance(dados, pd.DataFrame):
+    if not dados.empty:
+        dados, msg = prepararDados(dados)
+        if isinstance(dados, pd.DataFrame):
+            if not dados.empty:
+                visualizarDados(dados)
+    else:
+        print(msg)
 else:
-    print(msg2)
-print()
-print(f"{22 * '='} CÁLCULOS {22 * '='}")
-if not calculos.empty:
-    print(calculos)
-else:
-    print(msg1)
+    print(msg)
