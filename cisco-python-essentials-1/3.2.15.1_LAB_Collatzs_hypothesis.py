@@ -4,7 +4,7 @@ steps = 0
 try:
     # Step 1: take any non-negative and non-zero integer number and name it c0
     c0 = int(input("Type any non-negative non-zero integer number: "))
-    if c0 < 0:
+    if c0 < 1:
         raise ValueError
 except ValueError:
     print("Only non-negative non-zero integer numbers allowed!")
