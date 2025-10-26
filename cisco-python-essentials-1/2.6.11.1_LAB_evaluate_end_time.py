@@ -37,21 +37,6 @@ print(hour, ":", mins, sep='')
 '''
 
 # Version 4
-class TimeError(Exception):
-    pass
-
-def test_code():
-    """Tests the code by using predefined values"""
-    input_hour = [12, 23, 0, 23]
-    input_mins = [17, 58, 1, 59]
-    input_dura = [59, 642, 2939, 2]
-    output = ['13:16', '10:40', '1:0', '0:1']
-    for i in range(len(input_hour)):
-        if evaluate_end_time(input_hour[i], input_mins[i], input_dura[i]) == output[i]:
-            print(f"Success! {input_hour[i]}:{input_mins[i]} after {input_dura[i]} mins is {output[i]}")
-        else:
-            print(f"Error! {input_hour[i]}:{input_mins[i]} after {input_dura[i]} mins is NOT {output[i]}")
-
 def evaluate_end_time(hour, mins, dura):
     """Evaluates the end time"""
     msg = None
@@ -113,6 +98,17 @@ def receive_time():
         print("Something went wrong! Try again.")
     return hour, mins, dura
 
+def test_code():
+    """Tests the code by using predefined values"""
+    input_hour = [12, 23, 0, 23]
+    input_mins = [17, 58, 1, 59]
+    input_dura = [59, 642, 2939, 2]
+    output = ['13:16', '10:40', '1:0', '0:1']
+    for i in range(len(input_hour)):
+        if evaluate_end_time(input_hour[i], input_mins[i], input_dura[i]) == output[i]:
+            print(f"Success! {input_hour[i]}:{input_mins[i]} after {input_dura[i]} mins is {output[i]}")
+        else:
+            print(f"Error! {input_hour[i]}:{input_mins[i]} after {input_dura[i]} mins is NOT {output[i]}")
 
 if __name__ == "__main__":
     hour, mins, dura = receive_time()
