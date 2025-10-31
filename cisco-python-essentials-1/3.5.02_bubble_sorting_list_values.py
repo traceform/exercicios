@@ -8,6 +8,8 @@
 # it. We haven't explained this so far, and we'll do that a little later.
 #
 # How many passes do we need to sort the entire list?
+#
+# Note: this was done before the method .sort() was introduced
 
 ''' # Version 1
 list = [8, 10, 6, 2, 4]
