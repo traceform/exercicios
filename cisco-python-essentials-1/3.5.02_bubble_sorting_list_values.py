@@ -84,9 +84,9 @@ def bubble_sort(values: list[float]) -> list[float]:
     while swapped:
         swapped = False
 
-        for n in range(len(values) - 1):
-            if values[n] > values[n + 1]:
-                values[n], values[n + 1] = values[n + 1], values[n]
+        for i in range(len(values) - 1):
+            if values[i] > values[i + 1]:
+                values[i], values[i + 1] = values[i + 1], values[i]
                 swapped = True # swap occurred
     return values
 
@@ -102,4 +102,4 @@ if __name__ == "__main__":
     values = receive_values(element_amount)
     values = bubble_sort(values)
     values = fix_integers(values)
-    print(values)
+    print(f"Sorted: {values}")
